@@ -4,7 +4,7 @@ function fetchWeatherAndRecommend() {
     const city = document.getElementById('location').value;
     // Using CORS proxy to bypass cross-origin restrictions
     const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-    const url = corsProxy + `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     
     fetch(url)
         .then(response => response.json())
